@@ -1,0 +1,27 @@
+.cardProducto{
+    background-color:white;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 20rem;
+    padding: 1rem;
+    margin: 5px;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardProducto img {
+    width: 200px;
+    border-radius: 5px;    
+}
+
+.btn {
+    background-color: gainsboro;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}

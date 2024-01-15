@@ -1,0 +1,11 @@
+.contenedorItem{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: 1px solid black;
+    margin: auto;
+
+}
+
+.contenedorItem img {
+    width: 35vw;
+}
