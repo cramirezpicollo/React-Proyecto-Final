@@ -21,8 +21,8 @@ const ItemDetail = ({ id, nombre, stock, precio, img }) => {
     <div className='contenedorItem'>
       <h2>{nombre}</h2>
       <p>${precio}</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem perspiciatis neque autem sit officia omnis ea vitae fugit commodi dolores quidem veritatis dolorum ab, delectus dignissimos illo soluta beatae suscipit!</p>
       <img src={img} alt={nombre} />
+      <p>Porque amamos la Navidad, regalate un pijamita </p>
 
       {agregarCantidad > 0 ? (<Link to="/cart" >Terminar Compra</Link>) : (<Contador inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
       }

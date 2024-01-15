@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import { db } from '../../service/config'
 import { collection, addDoc } from 'firebase/firestore'
+import "./Checkout.css";
 
 const Checkout = () => {
     const { carrito, vaciarCarrito, total, cantidadTotal } = useContext(CarritoContext)
@@ -58,9 +59,9 @@ const Checkout = () => {
 
     return (
         <div>
-            <h2> Checkout </h2>
+            <h2> CHECKOUT </h2>
 
-            <form onSubmit={manejadorSubmit}>
+            <form onSubmit={manejadorSubmit} className='formulario'>
                 {
                     carrito.map(producto => (
                         <div key={producto.item.id}>
@@ -72,27 +73,27 @@ const Checkout = () => {
                 }
                 <hr />
 
-                <div>
+                <div className='itemCheckout'>
                     <label htmlFor=" ">Nombre</label>
                     <input type="text" onChange={(e) => setNombre(e.target.value)} />
                 </div>
 
-                <div>
+                <div className='itemCheckout'>
                     <label htmlFor=" ">Apellido</label>
                     <input type="text" onChange={(e) => setApellido(e.target.value)} />
                 </div>
 
-                <div>
+                <div className='itemCheckout'>
                     <label htmlFor=" ">Telefono</label>
                     <input type="text" onChange={(e) => setTelefono(e.target.value)} />
                 </div>
 
-                <div>
+                <div className='itemCheckout'>
                     <label htmlFor=" ">Email</label>
                     <input type="email" onChange={(e) => setEmail(e.target.value)} />
                 </div>
 
-                <div>
+                <div className='itemCheckout'>
                     <label htmlFor=" ">Email Confirmación</label>
                     <input type="email" onChange={(e) => setEmailConfirmacion(e.target.value)} />
                 </div>
@@ -100,18 +101,19 @@ const Checkout = () => {
                 {
                     error && <p style={{ color: "red" }} > {error} </p>
                 }
-
-                <button type="submit">Finalizar compra </button>
+                <div className='boton'>
+                    <button type="submit">Finalizar compra </button>
+                </div>
 
                 {
                     ordenId && (
-                        <strong> Gracias por tu compra. Tu número de orden es : {ordenId} </strong>
+                        <strong className='ordenId'> Gracias por tu compra. Tu número de orden es : {ordenId} </strong>
                     )
                 }
 
-            </form>
+            </form >
 
-        </div>
+        </div >
     )
 }
 
