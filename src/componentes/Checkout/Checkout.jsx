@@ -66,7 +66,7 @@ const Checkout = () => {
                     carrito.map(producto => (
                         <div key={producto.item.id}>
                             <p> {producto.item.nombre} x {producto.cantidad} </p>
-                            <p> Precio: $ {producto.item.precio} </p>
+                            <p> Precio unitario: $ {producto.item.precio} </p>
                             <hr />
                         </div>
                     ))
